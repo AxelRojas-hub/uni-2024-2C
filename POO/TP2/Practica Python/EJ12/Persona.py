@@ -1,14 +1,17 @@
+from Puesto import Puesto
 class Persona:
     __edad: int
     __sexo: str
     __estudia: bool
     __trabaja: bool
+    __puesto: str
     
-    def __init__(self, edad, sexo, estudia, trabaja):
+    def __init__(self, edad, sexo, estudia, trabaja, puesto):
         self.__edad= edad
         self.__sexo= sexo
         self.__estudia= estudia
         self.__trabaja= trabaja
+        self.__puesto = Puesto(puesto)
     
     def get_edad(self):
         return self.__edad
@@ -31,3 +34,6 @@ class Persona:
         return self.__trabaja
     def set_trabaja(self,trabaja):
         self.__trabaja=trabaja
+        
+    def toString(self):
+        return (f'Puesto:{self.__puesto.get_nombre()} Edad:{self.__edad} Sexo:{self.__sexo}\nEstudia:{self.__estudia} | Trabaja:{self.__trabaja}')

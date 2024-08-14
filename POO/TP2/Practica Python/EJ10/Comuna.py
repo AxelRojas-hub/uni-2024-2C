@@ -44,11 +44,29 @@ class Comuna:
             personas = personas + len(familia.get_personas())
         return suma_edad/personas
     
-    def get_cantidad_trabajadores(self):
-        trabajadores=0
+    def get_trabajadores(self):
+        trabajadores=[]
         familias= self.__familias;
         for familia in familias:
             for persona in familia.get_personas():
                 if persona.get_trabaja():
-                    trabajadores += 1
+                    trabajadores.append(persona)
         return trabajadores
+    
+    def get_list_pueden_trabajar(self):
+        familias = self.__familias
+        pueden_trabajar=[]
+        for familia in familias:
+            for persona in familia.get_personas():
+                if persona.get_puede_trabajar():
+                    pueden_trabajar.append(persona)
+        return pueden_trabajar
+
+    def get_list_pueden_manejar(self):
+        familias = self.__familias
+        pueden_manejar=[]
+        for familia in familias:
+            for persona in familia.get_personas():
+                if persona.get_puede_manejar():
+                    pueden_manejar.append(persona)
+        return pueden_manejar

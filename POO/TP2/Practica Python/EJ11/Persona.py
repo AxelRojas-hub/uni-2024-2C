@@ -31,3 +31,6 @@ class Persona:
         return self.__trabaja
     def set_trabaja(self,trabaja):
         self.__trabaja=trabaja
+        
+    def toString(self):
+        return (f'Edad:{self.__edad} Sexo:{self.__sexo}\nEstudia:{self.__estudia} Trabaja:{self.__trabaja}')

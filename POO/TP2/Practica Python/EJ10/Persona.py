@@ -3,9 +3,15 @@ class Persona:
     __sexo: str
     __estudia: bool
     __trabaja: bool
+    _puede_trabajar=False
+    _puede_manejar=False
     
     def __init__(self, edad, sexo, estudia, trabaja):
         self.__edad= edad
+        if edad >= 16:
+            self._puede_trabajar = True
+            if edad>=17:
+                self._puede_manejar= True
         self.__sexo= sexo
         self.__estudia= estudia
         self.__trabaja= trabaja
@@ -31,3 +37,9 @@ class Persona:
         return self.__trabaja
     def set_trabaja(self,trabaja):
         self.__trabaja=trabaja
+    
+    def get_puede_trabajar(self):
+        return self._puede_trabajar
+    
+    def get_puede_manejar(self):
+        return self._puede_manejar
