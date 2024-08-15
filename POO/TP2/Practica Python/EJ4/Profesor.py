@@ -22,9 +22,10 @@ class Profesor:
     
     def set_materia(self, materia):
         self.__materia = materia
-        
+    
     def get_materia(self):
         return self.__materia
     
     def add_materia(self, materia):
         self.__materia.append(materia)
+        
