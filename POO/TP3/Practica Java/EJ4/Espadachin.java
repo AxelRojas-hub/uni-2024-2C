@@ -1,6 +1,6 @@
 public class Espadachin extends Personaje {
-    public Integer defender() {
-        return 1;
+    public void defender(Integer ataque) {
+
     };
 
 }

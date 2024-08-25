@@ -1,9 +1,9 @@
 import java.util.Random;
 
 public abstract class Personaje {
-    private Integer vida = 100;
-    private Integer nivelAtaque;
-    private Integer nivelDefensa;
+    protected Integer vida;
+    protected Integer nivelAtaque;
+    protected Integer nivelDefensa;
 
     public Integer getVida() {
         return this.vida;
@@ -34,6 +34,6 @@ public abstract class Personaje {
         return ataqueRandom;
     }
 
-    public abstract Integer defender();
+    public abstract void defender(Integer ataque);
 
 }
