@@ -1,33 +1,8 @@
 package EJ8;
 
-public class ProfesorSuplente {
-    private String nombre;
-    private String apellido;
-    private Integer edad;
-    private Integer horasTrabajadas;
-    private Double valorHora = 200.00;
-
+public class ProfesorSuplente extends Profesor {
     public ProfesorSuplente(String nombre, String apellido, Integer edad, Integer horasTrabajadas) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.horasTrabajadas = horasTrabajadas;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+        super(nombre, apellido, edad, horasTrabajadas);
     }
 
     public Double get_remuneracion_mensual() {

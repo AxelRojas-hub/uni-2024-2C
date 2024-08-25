@@ -18,13 +18,17 @@ public class App {
         for (ProfesorTitular prof : titulares) {
             System.out.println("Nombre y Apellido " + prof.getNombre() + ", " + prof.getApellido());
             System.out.println("Es titular");
-            System.out.println("Remuneracion: " + prof.get_remuneracion_mensual());
+            String cadenaSueldo = String.format(
+                    "Remuneracion: %,.2f", prof.get_remuneracion_mensual());
+            System.out.println(cadenaSueldo);
+            System.out.println("-------------");
         }
 
         for (ProfesorSuplente prof : suplentes) {
             System.out.println("Nombre y Apellido " + prof.getNombre() + ", " + prof.getApellido());
             System.out.println("No es titular");
             System.out.println("Remuneracion: " + prof.get_remuneracion_mensual());
+            System.out.println("-------------");
         }
     }
 }
