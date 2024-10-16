@@ -15,7 +15,7 @@ public class Database {
         try {
             String url = "jdbc:postgresql://localhost:5432/TP5EJ3";
             String usuario = "postgres";
-            String password = "a39436707";
+            String password = System.getenv("DB_PASSWORD");
             conexion = DriverManager.getConnection(url, usuario, password);
             System.out.println("Conexion a la base de datos establecida");
         } catch (Exception e) {
