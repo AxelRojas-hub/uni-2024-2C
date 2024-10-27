@@ -7,9 +7,10 @@ public class App {
     @SuppressWarnings("UseSpecificCatch")
     public static void main(String[] args) {
         Database bd1 = Database.getInstancia();
-        ResultSet rs = bd1.ejecutarConsulta("SELECT * FROM alumno WHERE legajo = 1001");
+        ResultSet rs = bd1.ejecutarConsulta("SELECT * FROM alumno WHERE legajo = 1001"); //Tabla del ej3 de bd
 
         try {
+            //Si cambia la consulta hay que cambiar el formateo de los datos que recupera
             while(rs.next()) {
                 System.out.println("Legajo: " + rs.getInt("legajo"));
                 System.out.println("Nombre: " + rs.getString("nombre"));

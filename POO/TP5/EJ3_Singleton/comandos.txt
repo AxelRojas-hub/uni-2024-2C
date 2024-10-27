@@ -1,5 +1,8 @@
+Ejecutar desde el directorio del ejercicio
+
 Compilar
 javac -d bin -cp "lib/*" App.java Database.java 
+
 Ejecutar
 java -cp "bin;lib/*" EJ3_Singleton.App
-(EJ3_singleton es el nombre del pckg)
+(EJ3_singleton es el nombre del pckg/nombre de la carpeta)
